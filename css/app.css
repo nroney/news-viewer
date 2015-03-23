@@ -1,0 +1,72 @@
+/* Layout */
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+
+.clear {
+	clear: both;
+}
+
+.ios-loader {
+	background-image: url('../images/loader/ajax-loader.gif');
+	background-repeat: no-repeat;
+}
+
+ul.item-list {
+	width: 100%;
+	list-style: none;
+	padding-left: 0;
+}
+
+.item-list li {
+	width: 100%;
+	list-style: none;
+	height: 10%;
+	background: repeat-x bottom left url(data:image/gif;base64,R0lGODlhAQACAPABAMjHzP///yH/C1hNUCBEYXRhWE1QAz94cAAh+QQFAAABACwAAAAAAQACAAACAgwKADs=);
+	background-size: 100% 1px;
+	padding-top: 40px;
+}
+
+#content {
+	margin-top: 100px;
+}
+
+.btn {
+	margin-bottom: 0;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 2px solid #666666;
+	color: #666666;
+}
+
+.btn-small {
+	width: 110px;
+	font-size: 12px;
+}
+
+.btn-small-center {
+	width: 110px;
+	font-size: 12px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 20px;
+}
+
+.btn-large {
+	width: 90%;
+	margin-top: 5px;
+	height: 40px;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}

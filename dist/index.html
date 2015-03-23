@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MMGap</title>
+
+	<link rel="stylesheet" href="css/app.css">
+
+	<link rel="stylesheet" type="text/css" href="css/fonts/flaticon.css">
+
+</head>
+<body>
+
+<div class="container">
+	<menu></menu>
+	<div id="inner">
+		<header class="header-blur">
+			<div class="header-shadow"></div>
+			<div id="headerLogo"></div>
+			<div id="headerMenu">
+				<ul class="menu-list">
+					<li><a href="#">About</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="contentWrap">
+			<div id="topMargin"></div>
+			<div id="content">
+			</div>
+		</div>
+		<footer></footer>
+	</div>
+</div>
+
+<!--templates -->
+<script class="tmpl-header" type="text/template">
+	<!--<a href="" id="menuToggle">
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</a>-->
+	<span id="pageTitle"></span>
+	<a href="/" class="logo"></a>
+</script>
+
+<script class="tmpl-header-nav" type="text/template">
+	<button class="left arrow left-nav" data-vin="view-home" data-sd="sr">
+		<div class="header-label">Back</div>
+	</button>
+	<span id="pageTitle"></span>
+	<a href="/" class="logo"></a>
+</script>
+
+<script class="tmpl-index" type="text/template">
+	<div class="template-content">
+		<div class="home-image-container"></div>
+		<div class="home-bottom"></div>
+	</div>
+</script>
+
+<script class="tmpl-footer" type="text/template">
+	<div class="template-content">
+		<div class="footer-shadow"></div>
+
+		<label>Solutions</label>
+		<ul class="footer-list">
+			<li>Business Intelligence Solutions</li>
+			<li>Search</li>
+			<li>Mobile Solutions</li>
+		</ul>
+		<label>Products</label>
+		<ul class="footer-list">
+			<li>Sales Rep Intelligence</li>
+			<li>Business Intelligence (BI Plus)</li>
+			<li>Search (Search Plus)</li>
+		</ul>
+	</div>
+</script>
+
+
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
