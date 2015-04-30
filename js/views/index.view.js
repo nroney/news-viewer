@@ -12,18 +12,28 @@ IndexView = Backbone.View.extend({
 
 	},
 	render: function (model) {
-		var _this = this,
-			data = _.sortBy(model.get("resultset").news, 'published');
+		var _this = this;
 
-		var news = {'news': data};
 		var template = _.template(
 			$("script.tmpl-index").html()
 		);
 
 		$("#content").html(
-			template(news)
+			template()
 		);
+		_this.fetchItem();
+
+		$(window).scroll(function() {
+			if (  document.documentElement.clientHeight +
+				$(document).scrollTop() >= document.body.offsetHeight )
+			{
+				// Display alert or whatever you want to do when you're
+				//   at the bottom of the page.
+				_this.fetchItem();
+			}
+		});
 	},
+
 	appendArticles: function (model) {
 
 		this.subView1 = new ArticleView(model);

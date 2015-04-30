@@ -6,9 +6,11 @@ var ArticleView = Backbone.View.extend({
 		var template = _.template(
 			$("script.tmpl-article").html()
 		);
+		if(model){
+			$("#articles").html(
+				template(model)
+			);
+		}
 
-		$("#articles").html(
-			template(model)
-		);
 	}
 });

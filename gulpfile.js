@@ -6,10 +6,6 @@ var uglifycss = require('gulp-uglifycss');
 var jslint = require('gulp-jslint');
 var htmlreplace = require('gulp-html-replace');
 var copy = require('gulp-copy');
-var jasmine = require('gulp-jasmine');
-var reporters = require('jasmine-reporters');
-
-
 
 gulp.task('compress-css', function () {
 	gulp.src('./dist/css/app.css')
@@ -78,14 +74,6 @@ gulp.task('copy-fonts', function() {
 		.pipe(copy('dist/'));
 });
 
-gulp.task('jasmine-default', function () {
-	return gulp.src('test/spec/test.js')
-		.pipe(jasmine({
-			reporter: new reporters.JUnitXmlReporter()
-		}));
-});
 
 
-
-
-gulp.task('build', ['concat-scripts', 'concat-css', 'compress-js', 'compress-css', 'index-change', 'copy-images', 'copy-fonts', 'jasmine-default']);
+gulp.task('build', ['concat-scripts', 'concat-css', 'compress-js', 'compress-css', 'index-change', 'copy-images', 'copy-fonts']);

@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Advanced Search & Business Analytics</title>
-	<script src="js/libs/head.load.min.js"></script>
+	<title></title>
+
 	<!-- build:js -->
+	<script src="js/libs/head.load.min.js"></script>
 	<script>
 		head.load("node_modules/jquery/dist/jquery.min.js",
 				"node_modules/json2/lib/JSON2/static/json2.js",
@@ -25,16 +26,12 @@
 	<!-- build:css -->
 	<script>
 		head.load(
-				"css/bootstrap.min.css",
-				"css/bootstrap-theme.min.css",
+				"css/bootstrap.css",
+				"css/bootstrap-theme.css",
 				"css/app.css"
 		);
 	</script>
 	<!-- endbuild -->
-	<link rel="stylesheet" type="text/css" href="css/fonts/flaticon.css">
-	<link rel="stylesheet" type="text/css" href="css/fonts/social.css">
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,400,700,900,100italic,400italic,700italic|Roboto+Slab:400,300,100,700'
-		  rel='stylesheet' type='text/css'>
 
 </head>
 <body>
@@ -43,15 +40,9 @@
 	<div id="inner">
 		<header class="header-blur">
 			<div class="header-container">
-				<div class="header-shadow"></div>
-				<a href="#"></a>
-
-				<div id="headerMenu">
-				</div>
 			</div>
 		</header>
 		<div id="contentWrap">
-			<div id="topMargin"></div>
 			<div id="content">
 			</div>
 		</div>
@@ -63,25 +54,20 @@
 <!--templates -->
 <script class="tmpl-index" type="text/template">
 	<div class="template-content">
-		<ul id="articles" class="list-group">
-
-		</ul>
-
-		<a href="#" class="next">next</a>
+		<ul id="articles" class="list-group"></ul>
 	</div>
-
 </script>
 <script class="tmpl-article" type="text/template">
 	<div class="template-content">
+		<% if(!_.isUndefined(news)){ %>
 		<%_.each(news, function(article){%>
 		<li class="list-group-item">
-			<div><%= article.title %></div>
+			<div class="article-title"><%= article.title %></div>
 			<div><%= article.published %></div>
 		</li>
-
 		<% }); %>
+		<% } %>
 	</div>
-
 </script>
 </body>
 </html>

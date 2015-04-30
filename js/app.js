@@ -6,7 +6,7 @@ window.app = {
     },
     init: function () {
             Backbone.history.start();
-            app.ready();
+            //app.ready();
     },
 	showLoader: function(e){
 		var $el = $(e.currentTarget).find('span');
@@ -25,10 +25,7 @@ window.app = {
 		return false;*/
     },
     afterRender: function (aOptions) {
-        if (Backbone.history.fragment.length) {
-            //$('footer').empty();
-            //$('header').empty();
-        }
+
     },
     resize: function (aCallback) {
         var resizeTimeoutId = null;
